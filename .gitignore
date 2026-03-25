@@ -1,0 +1,6 @@
+# PocketBase data
+pb_data/
+
+# Binaries
+boltadmin
+*.exe
