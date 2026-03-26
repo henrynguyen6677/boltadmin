@@ -18,6 +18,11 @@ func NewApp() *App {
 		Hooks: hook.NewManager(),
 	}
 }
+
+func (a *App) GetHooks() *hook.HookManager {
+  return a.Hooks
+}
+
 func (a *App) Launch() error {
 	 a.PB.OnRecordCreate().BindFunc(func(e *core.RecordEvent) error {
 		 collectionName := e.Record.Collection().Name
