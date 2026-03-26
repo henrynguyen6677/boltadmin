@@ -8,7 +8,8 @@ import (
 
 
 func main(){
-	if err := core.Launch(); err != nil {
+	app := core.NewApp()
+	if err := app.Launch(); err != nil {
     log.Fatal(err)
 	}
 }

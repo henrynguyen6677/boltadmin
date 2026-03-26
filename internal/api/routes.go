@@ -5,7 +5,7 @@ import (
 	"github.com/pocketbase/pocketbase/core"
 )
 
-func RegisterCustomRoutes(e *core.ServeEvent) error {
+func RegisterCustomRoutes(e *core.ServeEvent, _ any) error {
   e.Router.GET("/api/bolt-test", func (se *core.RequestEvent) error {
     return se.JSON(http.StatusOK, map[string]string{
       "status": "success",
